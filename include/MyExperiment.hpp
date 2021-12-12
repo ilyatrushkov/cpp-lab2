@@ -25,7 +25,6 @@ class MyExperiment {
   std::vector<size_t> _indexes_for_buffer;
 
  public:
-//  static int counter_of_experiments;
   explicit MyExperiment(const size_t &N);
   size_t get_number_of_elements() const;
   ExperimentTimes get_time() const;
