@@ -4,7 +4,6 @@
 MyExperiment::MyExperiment(const size_t &N)
     : _times()
     , _number_of_elements(N) {
-//  counter_of_experiments += 1;
   _mas = new int[_number_of_elements];
 
 //  std::random_device rd;
@@ -53,8 +52,6 @@ auto MyExperiment::loop_mas() {
 void MyExperiment::make_straight_experiment() {
   warming_cache();
   _times.time_straight = loop_mas();
-//  std::cout << "Straight bypass duration: " << _times.time_straight << " ms"
-//            << std::endl;
 }
 
 void MyExperiment::make_reverse_experiment() {
@@ -62,8 +59,6 @@ void MyExperiment::make_reverse_experiment() {
   warming_cache();
   std::reverse(_indexes_for_buffer.begin(), _indexes_for_buffer.end());
   _times.time_reverse = loop_mas();
-//  std::cout << "Reverse bypass duration: " << time.duration_reverse << " ms"
-//            << std::endl;
 }
 
 void MyExperiment::make_random_experiment() {
@@ -72,8 +67,6 @@ void MyExperiment::make_random_experiment() {
   warming_cache();
   std::shuffle(_indexes_for_buffer.begin(), _indexes_for_buffer.end(), g);
   _times.time_random = loop_mas();
-//  std::cout << "Random bypass duration: " << time.duration_random << " ms"
-//            << std::endl;
 }
 
 MyExperiment::~MyExperiment() {
