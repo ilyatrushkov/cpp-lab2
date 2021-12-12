@@ -1,6 +1,6 @@
 // Copyright 2021 Trushkov Ilya ilya.tr20002@gmail.com
-#ifndef TEMPLATE_FOR_INVESTIGATION_HPP
-#define TEMPLATE_FOR_INVESTIGATION_HPP
+#ifndef INCLUDE_FOR_INVESTIGATION_HPP_
+#define INCLUDE_FOR_INVESTIGATION_HPP_
 
 #include "MyExperiment.hpp"
 
@@ -22,4 +22,4 @@ struct MasSize {
 
 void make_report(std::vector <MyExperiment*> &results, std::ostream &os);
 
-#endif  // TEMPLATE_FOR_INVESTIGATION_HPP
+#endif  // INCLUDE_FOR_INVESTIGATION_HPP_
