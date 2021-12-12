@@ -1,9 +1,7 @@
-// Copyright 2021 Your Name <your_email>
-
-#include <stdexcept>
+// Copyright 2021 Trushkov Ilya ilya.tr20002@gmail.com
 
 #include <gtest/gtest.h>
 
-TEST(Example, EmptyTest) {
-    EXPECT_THROW(example(), std::runtime_error);
+TEST(empty_test, EmptyTest) {
+  EXPECT_TRUE(true);
 }

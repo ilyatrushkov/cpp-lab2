@@ -11,7 +11,7 @@ MyExperiment::MyExperiment(const size_t &N)
 //  std::mt19937 mersenne(rd());
   std::mt19937 generator(clock());
   for (size_t i = 0; i < _number_of_elements; ++i)
-    _mas[i] = (int) generator();
+    _mas[i] = generator();
 
   for (size_t i = 0; i < _number_of_elements; i += 16)
     _indexes_for_warming.push_back(i);
@@ -52,7 +52,7 @@ auto MyExperiment::loop_mas() {
 
 void MyExperiment::make_straight_experiment() {
   warming_cache();
-  _times.time_straight = (double) loop_mas();
+  _times.time_straight = loop_mas();
 //  std::cout << "Straight bypass duration: " << _times.time_straight << " ms"
 //            << std::endl;
 }
@@ -61,7 +61,7 @@ void MyExperiment::make_reverse_experiment() {
   std::reverse(_indexes_for_warming.begin(), _indexes_for_warming.end());
   warming_cache();
   std::reverse(_indexes_for_buffer.begin(), _indexes_for_buffer.end());
-  _times.time_reverse = (double) loop_mas();
+  _times.time_reverse = loop_mas();
 //  std::cout << "Reverse bypass duration: " << time.duration_reverse << " ms"
 //            << std::endl;
 }
@@ -71,7 +71,7 @@ void MyExperiment::make_random_experiment() {
   std::shuffle(_indexes_for_warming.begin(), _indexes_for_warming.end(), g);
   warming_cache();
   std::shuffle(_indexes_for_buffer.begin(), _indexes_for_buffer.end(), g);
-  _times.time_random = (double) loop_mas();
+  _times.time_random = loop_mas();
 //  std::cout << "Random bypass duration: " << time.duration_random << " ms"
 //            << std::endl;
 }
