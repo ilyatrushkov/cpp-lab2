@@ -1,6 +1,6 @@
 // Copyright 2021 Trushkov Ilya ilya.tr20002@gmail.com
-#ifndef TEMPLATE_MYEXPERIMENT_HPP
-#define TEMPLATE_MYEXPERIMENT_HPP
+#ifndef INCLUDE_MYEXPERIMENT_HPP_
+#define INCLUDE_MYEXPERIMENT_HPP_
 
 #include <iostream>
 #include <cstdlib>
@@ -26,7 +26,7 @@ class MyExperiment {
 
  public:
 //  static int counter_of_experiments;
-  MyExperiment(const size_t &N);
+  explicit MyExperiment(const size_t &N);
   size_t get_number_of_elements() const;
   ExperimentTimes get_time() const;
   static int get_element(int a);
@@ -38,4 +38,4 @@ class MyExperiment {
   ~MyExperiment();
 };
 
-#endif  // TEMPLATE_MYEXPERIMENT_HPP
+#endif  // INCLUDE_MYEXPERIMENT_HPP_
