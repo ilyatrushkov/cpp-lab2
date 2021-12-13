@@ -21,7 +21,7 @@ int main() {
     mas_info.current_size = pow(2, step);
     N = mas_info.current_size / sizeof(int);
     make_report(results, std::cout);
-    for (auto p : results) {
+    for (auto &p : results) {
       delete p;
     }
     results.clear();
