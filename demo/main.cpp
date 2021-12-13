@@ -20,6 +20,8 @@ int main() {
     ++step;
     mas_info.current_size = pow(2, step);
     N = mas_info.current_size / sizeof(int);
+    make_report(results, std::cout);
+    results.clear();
   }
   if (mas_info.current_size != mas_info.max_size) {
     auto *experiment = new MyExperiment(mas_info.max_size / sizeof(int));
@@ -27,7 +29,7 @@ int main() {
     experiment -> make_reverse_experiment();
     experiment -> make_random_experiment();
     results.push_back(experiment);
+    make_report(results, std::cout);
   }
-  make_report(results, std::cout);
   return 0;
 }
